@@ -1,0 +1,185 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Tecna Corp</title>
+    <style>
+        @@font-face {
+            font-family: 'Coves';
+            src: url('../fonts/Coves Bold.otf');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        #body {
+            border-top: none;
+            border-left: none;
+            background-color: #FFFFFF;
+        }
+        /**/ #menu {
+            display: block;
+            margin-top: 20px;
+            position: fixed;
+            align-items: center;
+            left: 50%;
+            margin-left: -225px;
+            width: 450px;
+            height: 37px;
+            background-color: #1D1B1B;
+            font-size: 18px;
+            font-family: Coves;
+            font: Coves;
+            font-weight: bold;
+            text-align: center;
+            padding: 8px 0px;
+            border-radius: 8px;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            -o-border-radius: 8px;
+        }
+
+        .container-TGym {
+            width: 50%;
+            transform: translateX(-50%);
+            left: 50%;
+            position: relative;
+        }
+
+        #menu ul {
+            position: absolute;
+            margin-top: 2px;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-bottom: 1px;
+            padding: 8px 4px;
+            list-style: none;
+            height: auto;
+            text-align: center;
+        }
+
+        #menu li {
+            display: inline;
+            padding: 15px;
+        }
+
+        #menu a {
+            color: #FFF;
+            padding: 10px;
+            text-decoration: none;
+            border-bottom: 2px solid #EDEDED;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+            #menu a:hover {
+                background-color: #1B191B;
+                color: #FFF;
+                margin-top: 0px;
+                border-radius: 0px;
+                -webkit-border-radius: 0px;
+                -moz-border-radius: 0px;
+                -o-border-radius: 0px;
+                border-bottom: 2px solid #EA0000;
+            }
+
+        #menu li .active {
+            background-color: #1B191B;
+            color: #FFF;
+            border-radius: 20px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -o-border-radius: 20px;
+        }
+
+        #img {
+            background-position: center;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 800px;
+            background-image;
+            text-align: center;
+        }
+
+        #image {
+            border-left: none;
+            width: 100%;
+        }
+
+        #logo {
+            margin-top: 140px;
+            font-family: Coves;
+            text-decoration-color: #FFFFFF;
+        }
+
+        #btn {
+            margin-top: 50px;
+        }
+        /*botão de acesso*/
+        .botones {
+            background-color: #b30713;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            border: 1px solid #040504;
+            display: inline-block;
+            cursor: pointer;
+            color: #ffffff;
+            font-family: Coves;
+            font-size: 25px;
+            font-weight: bold;
+            padding: 19px 52px;
+            text-decoration: none;
+            text-shadow: 0px 0px 2px #1f291e;
+            transition: all 0.4s ease;
+        }
+
+            .botones:hover {
+                background-color: #131212;
+            }
+
+            .botones:active {
+                position: relative;
+                top: 1px;
+            }
+
+        #segunda {
+            border: 5px dotted #FF0000;
+            text-decoration-color: white
+        }
+        /*fim dessa pomba*/
+    </style>
+</head>
+<body style="background-color:#F0F0F0">
+    <!----><nav id="menu" style="z-index:4;">
+        <ul>
+            <li><a ref="#">Home</a></li>
+            <li><a ref="#">Empresa</a></li>
+            <li><a ref="#">Contato</a></li>
+
+        </ul>
+    </nav>
+    <div id="img" style="background: url(https://stmed.net/sites/default/files/keyboard-wallpapers-30703-6359784.jpg) no-repeat">
+        <!--<img src="https://stmed.net/sites/default/files/keyboard-wallpapers-30703-6359784.jpg" id="image"/>-->
+
+        <div id="logo">
+            <img src="~/Images/Tecna/neyma branco (2).png"
+                 width="270px"
+                 height="280px"
+                 title="Tecna Corporation" />
+            <h1 style="color: white; font-size:46px">T-Gym</h1>
+            <div class="container-TGym">
+                <h3 style="color: white"><p>O T-Gym é uma aplicação desenvolvida para o controle de dietas e treinos para quem pratica atividades físicas ou está começando.</br> As ferramentas auxiliam para um melhor estilo de vida...<br> Acesse Já!!</p></h3>
+            </div>
+        </div>
+        <!--Botão de login-->
+        <div id="btn"><a href="@Url.Action("Login","Usuario")" class="botones">Vamos Lá</a></div>
+    </div>
+</body>
+</html>

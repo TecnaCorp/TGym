@@ -1,0 +1,92 @@
+﻿<h2>Gráfico do seu Histórico</h2>
+<div class="chart-container">
+    <canvas id="chart"></canvas>
+</div>
+<div class="position-legend-chart">
+    <div class="legend-chart">
+        <table>
+            <tr>
+                <td><div class="legend-chart-line"></div></td>
+                <td>IMC</td>
+                <td style="padding-left:30px">
+                    <div class="legend-chart-area"></div>
+                </td>
+                <td>Peso Ideal</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script>
+    Chart.defaults.global.defaultFontColor = 'rgba(255,255,255,.7)';
+    Chart.defaults.global.defaultFontFamily = 'Coves';
+    Chart.defaults.global.defaultFontSize = 14;
+var data = {
+  labels: ["Jan", "Fev", "Mar", "Abril", "Maio", "Jun", "Jul"],
+    datasets: [{
+    label: "IMC",
+      backgroundColor: "#17a2b8",
+      borderColor: "#17a2b8",
+    borderWidth: 2,
+    data: [65, 59, 20, 50, 45, 30, 40],
+    fill: false }] };
+
+
+
+
+var options = {
+    maintainAspectRatio: false,
+    elements: {
+        line: {
+            tension: 0, // disables bezier curves
+        }
+    },
+  annotation: {
+      annotations: [{
+          type: 'box',
+          drawTime: 'beforeDatasetsDraw',
+          yScaleID: 'y-axis-0',
+          yMin: 18.5,
+          yMax: 25,
+          backgroundColor: 'rgba(220, 40, 40, 0.1)',
+          borderColor: '#dc2828',
+          borderWidth:1,
+      }]
+},
+    legend: {
+        display: false,
+    },
+    scales: {
+        
+    yAxes: [{
+        gridLines: {
+          display: true,
+                color: "rgba(255,255,255,0.1)"
+        },
+        ticks: {
+            suggestedMin: 15,
+            suggestedMax: 60
+        }
+    
+    }],
+
+
+    xAxes: [{
+      gridLines: {
+                display: false
+        },
+        }],
+        
+    }
+    
+
+};
+
+
+
+
+
+var myLineChart = new Chart('chart', {
+  type: 'line',
+  data: data,
+  options: options });
+</script>
