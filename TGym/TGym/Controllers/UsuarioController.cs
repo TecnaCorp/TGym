@@ -56,12 +56,35 @@ namespace TGym.Controllers
             return View();
         }
 
+        public ActionResult Dieta()
+        {
+            return View();
+        }
+
+        public ActionResult Treino()
+        {
+            return View();
+        }
+
         public void CadastraUsuario(Usuario u, string dia, string mes, string ano)
         {
             DateTime dataNasc = DateTime.Parse(dia + mes + ano);
             u.dataNasc = dataNasc;
             UsuarioDAO uDAO = new UsuarioDAO();
             uDAO.Cadastrar(u);
+        }
+        public bool verifLogin(string login, string senha)
+        {
+            try
+            {
+                UsuarioDAO uDAO = new UsuarioDAO();
+                Usuario u = uDAO.consultaEmail(login);
+                if (u.Senha == senha)
+                    return true;
+            }
+            catch { return false; }
+            
+            return false;
         }
     }
 }

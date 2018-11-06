@@ -19,5 +19,10 @@ namespace TGym.DAO
             context.Usuarios.Add(u);
             context.SaveChanges();
         }
+
+        public Usuario consultaEmail(string email)
+        {
+            return context.Usuarios.FirstOrDefault(e => e.Email == email);
+        }
     }
 }

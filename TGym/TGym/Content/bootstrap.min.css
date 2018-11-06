@@ -11,6 +11,30 @@ body{
   Color:#FFF;
   font-size:16px;
 }
+.ml-corpo{
+    margin-left:4.5rem!important;
+}
+#plaintext-perfil{
+    width:auto!important;
+    color:rgba(255,255,255,0.8);
+}
+.form-control-plaintext{
+    color: rgba(255,255,255,0.8);
+}
+
+#form-control-btn {
+    width: 13rem;
+}
+:disabled.form-control, [readonly].form-control{
+    background-color: rgb(20,23,28);
+    opacity:0.6;
+}
+.center-horizontal {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
 #icon-menulateral{
   font-size: 1.5em;
   color: #A1A4AB;
@@ -93,6 +117,7 @@ a{
     left:-11%;
     background-color: #101216;
     font-size: 1.25em;
+    z-index:3;
 }
 #lateral:hover, #lateral:focus,  #lateral:active  {
   -moz-transform: translate(62%, 0);

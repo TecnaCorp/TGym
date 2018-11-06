@@ -1,1 +1,69 @@
-﻿<h1>teste</h1>
+﻿<div class="form-row mb-5">
+    <div class="col">
+        <div class="form-inline">
+            <label>IMC</label>
+            <input type="text" class="form-control-plaintext ml-2" id="plaintext-perfil" readonly value="23,44" />
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="form-inline">
+            <label>Peso Ideal</label>
+            <input type="text" class="form-control-plaintext ml-2" id="plaintext-perfil" readonly value="56,32Kg"/>
+        </div>
+    </div>
+</div>  
+
+
+<div class="form-inline my-5">
+    <label>Categoria</label>
+    <input type="text" class="form-control-plaintext ml-2" id="plaintext-perfil" readonly value="Peso normal"/>
+</div>
+
+
+<div class="form-inline my-5">
+    <label>Dieta sugerida</label>
+    <input type="text" class="form-control-plaintext ml-2" id="plaintext-perfil" readonly value="Dieta 1 - 1200 kCal"/>
+</div>
+
+<form id="atualizDados">
+    <fieldset disabled>
+        <div class="form-row my-5">
+            <div class="col">
+                <label>Objetivo</label>
+                <select class="form-control disabled">
+                    <option>Bem-estar</option>
+                    <option>Definição dos músculos</option>
+                    <option>Ganho de músculos</option>
+                    <option selected>Perda de peso</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row my-5">
+            <div class="col mr-4">
+                <label>Peso</label>
+                <input type="text" class="form-control" value="60kg"/>
+            </div>
+
+            <div class="col">
+                <label>Altura</label>
+                <input type="text" class="form-control" value="1,60m"/>
+            </div>
+        </div>
+    </fieldset>
+    <div class="center-horizontal">
+        <button class="btn btn-info mt-5" id="btn-perfil-atualiza">Atualizar Dados</button>
+    </div>
+    <div class="form-row mt-5">
+        <div class="col-2">
+            <button class="btn btn-success btn-block invisible" id="salvar">Salvar</button>
+        </div>
+        <div class="col">
+
+        </div>
+        <div class="col-2">
+            <buton class="btn btn-danger btn-block invisible" id="btn-perfil-cancel">Cancelar</buton>
+        </div>
+    </div>
+</form>

@@ -128,7 +128,7 @@
     <Content Include="Scripts\jquery-slim.min.js" />
     <Content Include="Scripts\jquery.mask.js" />
     <Content Include="Scripts\jquery.mask.min.js" />
-    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.mi.js" />
     <Content Include="Scripts\popper.min.js" />
     <Content Include="Scripts\est.js" />
     <Content Include="Web.config" />
@@ -182,6 +182,8 @@
     <Content Include="Views\Usuario\Perfil.cshtml" />
     <Content Include="Views\Usuario\Historico.cshtml" />
     <Content Include="Views\Usuario\Site.cshtml" />
+    <Content Include="Views\Usuario\Dieta.cshtml" />
+    <Content Include="Views\Usuario\Treino.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
