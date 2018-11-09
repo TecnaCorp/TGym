@@ -73,18 +73,25 @@ namespace TGym.Controllers
             UsuarioDAO uDAO = new UsuarioDAO();
             uDAO.Cadastrar(u);
         }
-        public bool verifLogin(string login, string senha)
+        public int verifLogin(string login, string senha)
         {
-            try
+            UsuarioDAO uDAO = new UsuarioDAO();
+            if (uDAO.testaBD() == false)
             {
-                UsuarioDAO uDAO = new UsuarioDAO();
-                Usuario u = uDAO.consultaEmail(login);
-                if (u.Senha == senha)
-                    return true;
+                return 2; //mostra que a conexão com o bd ta merda
             }
-            catch { return false; }
+            else
+            {
+                try
+                {                    
+                    Usuario u = uDAO.consultaEmail(login);
+                    if (u.Senha == senha)
+                        return 1;
+                }
+                catch { return 0; }
+            }
             
-            return false;
+            return 0; //login ou senha errada
         }
     }
 }

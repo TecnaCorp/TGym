@@ -31,5 +31,7 @@ namespace TGym.Models
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             base.OnModelCreating(modelBuilder);
         }
+
+
     }
 }

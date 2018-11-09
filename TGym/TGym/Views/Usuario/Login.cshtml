@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="~/Content/bootstrap.min.css">
     <link rel="stylesheet" href="~/Content/style.css">
     <link rel="stylesheet" href="~/Content/flaticon.css">
-    <script src="~/Scripts/jquery.mi.js"></script>
+    <script src="~/Scripts/jquery.min.js"></script>
     <script src="~/Scripts/popper.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <style type="text/css">
@@ -65,7 +65,7 @@
                                 <input id="password" type="password" class="form-control text-login" placeholder="Senha" tabindex="2" required>
                             </div></br>
                             <div class="alert alert-warning fade" style="font-size:14px;" id="alertInvalido" role="alert">
-                                *E-mail ou senha incorretos, verifique e tente novamente.
+                                <a id="text-alert">*E-mail ou senha incorretos, verifique e tente novamente.</a>
                             </div>
                             <button type="submit" class="btn btn-outline-danger btn-block" id="btnLogin" tabindex="3" @*onclick="window.location.href='@Url.Action("Perfil")';"*@>Login</button></br></br>
                         </form>

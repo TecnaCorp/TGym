@@ -128,7 +128,7 @@
     <Content Include="Scripts\jquery-slim.min.js" />
     <Content Include="Scripts\jquery.mask.js" />
     <Content Include="Scripts\jquery.mask.min.js" />
-    <Content Include="Scripts\jquery.mi.js" />
+    <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\popper.min.js" />
     <Content Include="Scripts\est.js" />
     <Content Include="Web.config" />

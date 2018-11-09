@@ -25,6 +25,11 @@ body{
 #form-control-btn {
     width: 13rem;
 }
+#alertInvalido {
+    border: none;
+    background-color: transparent;
+    color: #ffc107;
+}
 :disabled.form-control, [readonly].form-control{
     background-color: rgb(20,23,28);
     opacity:0.6;
@@ -246,10 +251,6 @@ a{
 
 .was-validated .inp:invalid ~ .text-muted{
     display: none;
-}
-
-.was-validated #alertInvalid{
-    opacity:1;
 }
 
 .invalid-feedback{

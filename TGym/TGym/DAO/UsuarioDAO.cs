@@ -14,6 +14,16 @@ namespace TGym.DAO
             context = new EntidadeContext();
         }
 
+        public bool testaBD()
+        {
+            try
+            {
+                context.Usuarios.Count();
+                return true;
+            }
+            catch { return false; }
+        }
+
         public void Cadastrar(Usuario u)
         {
             context.Usuarios.Add(u);
